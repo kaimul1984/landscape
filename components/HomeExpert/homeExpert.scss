@@ -1,0 +1,89 @@
+@import "../../../global.scss";
+
+.homeExpert {
+  width: 1920px;
+  height: 702px;
+  margin-bottom: 100px;
+  background-color: $color-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h6 {
+      margin: 100px 0 30px;
+    }
+    h2 {
+      margin-bottom: 60px;
+    }
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      .card {
+        width: 330px;
+        height: 321px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0 0 12px 1px $color-light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        transition: all 0.3s;
+        .img {
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            background-color: #fff;
+            padding: 15px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            
+          }
+        }
+
+        h3 {
+          font-family: Nunito;
+          font-size: 25px;
+          font-weight: 300px;
+          color: $color-green;
+        }
+        p {
+          width: 270px;
+          line-height: 2;
+          font-size: 14px;
+          color: #676767;
+          text-align: center;
+        }
+       &:nth-child(1).active{
+          background-color: $color-green;
+          h3 {
+            color: #fff;
+          }
+          p {
+            color: #fff;
+          }
+          
+       }
+
+        &:hover {
+          background-color: $color-green;
+          h3 {
+            color: #fff;
+          }
+          p {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+@import "../../styles/mixing.module.scss";
+
+.single_project {
+  overflow: hidden;
+  width: 330px;
+  height: 406px;
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgb(177, 179, 176);
+  position: relative;
+  transition: all 0.3s linear;
+
+  .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .image {
+      width: 100%;
+      height: 259px;
+      border-radius: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .desc {
+      padding: 0 1rem;
+      h5 {
+        font-size: 24px;
+        color: $color-green;
+        text-transform: capitalize;
+        //line-height: 50px;
+        margin: 15px 0;
+      }
+      p {
+        font-size: 14px;
+        line-height: 25px;
+        color: #676767;
+      }
+    }
+  }
+  .hover_effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -400px;
+    //transform: translateX(-500px);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(7.887px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgb(202, 200, 200);
+    transition: all 0.3s linear;
+
+    .top {
+      z-index: 22;
+      color: #fff;
+      padding: 20px 20px 0;
+      h5 {
+        font-size: 24px;
+        color: $color-green;
+        text-transform: capitalize;
+        //line-height: 50px;
+        text-shadow: 2px 2px 5px rgb(4, 3, 3);
+        margin: 15px 0;
+      }
+      p {
+        font-size: 14px;
+        line-height: 25px;
+        color: #e8dfdf;
+        font-weight: 300;
+        margin-bottom: 120px;
+        text-shadow: 2px 2px 15px rgb(4, 3, 3);
+      }
+    }
+    .bottom {
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+
+      .arrow {
+        margin-left: 250px;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          font-size: 1.5rem;
+          color: #fff;
+        }
+      }
+      hr {
+        border: 1px solid #f7f3f3;
+      }
+    }
+  }
+  &:hover .hover-effect {
+    //transform: translateX(0);
+    left: 0;
+    transition: all 0.3s linear;
+  }
+}

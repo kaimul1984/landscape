@@ -1,0 +1,139 @@
+@import "../../global.scss";
+
+.footer {
+  width: 1920px;
+  height: 585px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#e6f6ea 9.9%, #d6b581da, #ffff);
+  .container {
+    height: 480px;
+    display: flex;
+    
+    border-bottom: 3px solid #000;
+    & > div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      //align-items: center;
+      justify-content: center;
+    }
+    h3 {
+      font-size: 25px;
+      font-family: Nunito;
+      font-weight: 300px;
+    }
+    p {
+      //margin: 50px 0;
+      font-size: 14px;
+      line-height: 30px;
+      width: 300px;
+      color: rgb(111, 108, 108);
+    }
+    .about-us {
+      gap: 50px;
+      .icon {
+        display: flex;
+        gap: 15px;
+        img {
+          border-radius: 50%;
+
+          &:nth-child(1) {
+            background-color: #4267b2;
+          }
+          &:nth-child(2) {
+            background-color: #1da1f2;
+          }
+          &:nth-child(3) {
+            background-color: #e60023;
+          }
+          &:nth-child(4) {
+            background-color: #0077b5;
+          }
+        }
+      }
+    }
+    .contacts {
+      display: flex;
+      gap: 50px;
+      .location,
+      .call,
+      .mail {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        p {
+          line-height: 25px;
+        }
+        svg {
+          //margin-right: 10px;
+          fill: $color-green;
+          font-size: 30px;
+        }
+      }
+    }
+    .links {
+      //width: 100%;
+      display: flex;
+      gap: 50px;
+      .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        div {
+          display: flex;
+          align-items: center;
+      color: rgb(111, 108, 108);
+
+          svg {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .newsLetter {
+      p {
+        margin: 50px 0;
+      }
+      .input {
+        width: 300px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #fff;
+        border: 1px solid #000;
+        display: flex;
+        padding: 3px;
+
+        input {
+          width: 100%;
+          border: none;
+        }
+        button {
+          padding: 8px 20px;
+
+          a {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    width: 1410px;
+    display: flex;
+    justify-content: space-between;
+   margin-bottom: 50px;
+.left {
+h6{
+  font-size: 10px;
+
+}}
+    .right{
+        display: flex;
+        gap: 30px;
+        font-size: 10px;
+    }
+  }
+}

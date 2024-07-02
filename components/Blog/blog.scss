@@ -1,0 +1,115 @@
+@import '../../global.scss';
+
+.blog {
+  width: 100%;
+  height: 803px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    height: 100%;
+    //background-color: rgb(147, 140, 140);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        margin: 60px 0;
+    }
+    .blog-container {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    
+    .single-blog {
+     width: 450px;
+     height: 625px; 
+     
+     border-radius: 10px;
+     box-shadow: 0 0 2px rgb(198, 193, 193);
+     transition: all .3s;
+
+     &:hover{
+     box-shadow: 0 0 10px rgb(63, 61, 61);
+
+     }
+     .img{
+        width: 450px;
+        height: 276px;
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius:  0 0 0 0;
+        }
+     }
+     .content {
+       padding: 20px;
+       
+       .name{
+        display: flex;
+        
+        justify-content: space-between;
+        margin-bottom: 30px;
+        h7{
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 2px 15px;
+            font-size: 13px;
+     transition: all .3s;
+           
+            
+        }
+        span{
+                text-decoration: underline;
+                color: $color-green;
+            }
+       }
+       h5{
+        font-size: 24px;
+        font-family: Nunito;
+        font-weight: 700px;
+        margin-bottom: 25px;
+       }
+       p{
+        margin-bottom: 25px;
+        font-size: 14px;
+        line-height: 25px;
+        color: gray;
+       }
+       .link{
+       a{
+         display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #000;
+       }
+       }
+     }
+     &:hover{
+     transition: all .3s;
+
+          img{
+            filter: blur(2px);
+        }
+        h7{
+             background-color: $color-green;
+            color: #fff;
+        }
+        h5{
+             color: $color-green;
+
+        }
+       .link{
+         a{
+            color: $color-green;
+        }
+       }
+      
+     }
+    }
+}
+  }
+}

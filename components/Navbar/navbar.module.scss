@@ -1,0 +1,53 @@
+@import "../../styles/mixing.module.scss";
+
+.navbar {
+  width: 100%;
+  height: 55px;
+  background: url(../../assests/images/bg.png);
+  //background: linear-gradient(#00730C24 100%, #e4c49e   , #FFF8F1);
+
+  padding: 2.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .container {
+    width: 100%;
+    max-width: 1420px;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      width: 120px;
+      height: 55px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      nav {
+        margin-right: 145px;
+
+        ul {
+          display: flex;
+          li {
+            margin-left: 50px;
+            list-style: none;
+            a {
+              text-decoration: none;
+              color: #000;
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
