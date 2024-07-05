@@ -1,16 +1,17 @@
+"use client";
+
 import React, { useState } from "react";
-import "./testimonial.scss";
+import styles from "./testimonial.module.scss";
 
 import { FaQuoteLeft } from "react-icons/fa";
-import team1 from '../../assests/images/team1.png';
-import team2 from '../../assests/images/team2.png';
-import team3 from '../../assests/images/team3.png';
-import comma from '../../assests/images/comma.png'
+import team1 from "../../assests/images/team1.png";
+import team2 from "../../assests/images/team2.png";
+import team3 from "../../assests/images/team3.png";
+import comma from "../../assests/images/comma.png";
+import Image from "next/image";
 
 const Testimonial = () => {
   const [selected, setSelected] = useState(0);
-
-
 
   const items = [
     {
@@ -59,37 +60,56 @@ const Testimonial = () => {
   ];
 
   return (
-    <div className="testimonial">
-      <div className="container">
+    <div className={styles.testimonial}>
+      <div className={styles.container}>
         <h6>clients testimonial</h6>
         <h2>
-          what our <span className="span">clients say</span>
+          what our <span className={styles.span}>clients say</span>
         </h2>
+
         <div
-          className="slider"
+          className={styles.slider}
           style={{
             transform: `translateX(${
               selected === items.length - 1
                 ? (items.length - 1 - selected) * 720
                 : -selected * 720
             }px)`,
-          }}>
+          }}
+        >
           {items.map((item, index) => (
             <div
-              className={selected === index ? "slide active" : "slide"}
-              key={item.name}>
-              <div className="left">
-                <div className={selected === index ? "img active" : "img"}>
-                  <img src={item.image} alt="" />
+              className={`${
+                selected === index
+                  ? `${styles.slide} ${styles.active}`
+                  : styles.slide
+              }`}
+              key={item.name}
+            >
+              <div className={styles.left}>
+                <div
+                  className={`${
+                    selected === index
+                      ? `${styles.img} ${styles.active}`
+                      : styles.img
+                  }`}
+                >
+                  <Image src={item.image} alt="" />
                 </div>
               </div>
-              <div className={selected === index ? "right active" : "right"}>
-                <div className="comma">
+              <div
+                className={`${
+                  selected === index
+                    ? `${styles.right} ${styles.active}`
+                    : styles.right
+                }`}
+              >
+                <div className={styles.comma}>
                   <FaQuoteLeft />
                 </div>
                 <p>{item.comment}</p>
 
-                <div className="name">
+                <div className={styles.name}>
                   <h4>{item.name}</h4>
                   <h5>{item.profession}</h5>
                 </div>
@@ -97,13 +117,18 @@ const Testimonial = () => {
             </div>
           ))}
         </div>
-        <div className="dots">
-          {Array.from({ length: 5 }).map((item, index) => (
+        <div className={styles.dots}>
+          {Array.from({ length: 5 }).map((i: any, index) => (
             <div
-              className={selected === index ? "dot active" : "dot"}
+              className={`${
+                selected === index
+                  ? `${styles.dot} ${styles.active}`
+                  : styles.dot
+              }`}
               onClick={() => setSelected(index)}
-              key={index}>
-              {item}
+              key={index}
+            >
+              {i}
             </div>
           ))}
         </div>

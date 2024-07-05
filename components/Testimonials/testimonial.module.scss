@@ -1,25 +1,23 @@
-@import "../../global.scss";
+@import "../../styles/mixing.module.scss";
 
 .testimonial {
-  width: 1920px;
+  width: 100%;
   height: 568px;
   margin-bottom: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
   .container {
-    overflow: hidden;
-
+    width: 100%;
+    max-width: 1420px;
     height: 100%;
-    //background-color: rgb(238, 180, 180);
+    overflow: hidden;
+    margin: 0 auto;
 
     h2 {
-      margin: 40px 0;
-      text-align: center;
+      margin: 20px 0 60px;
     }
-    h6 {
-      text-align: center;
-    }
+
     .slider {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
@@ -49,12 +47,11 @@
             border-radius: 10px;
             background-color: #fff;
             box-shadow: -10px -10px 1px $color-green;
-            transition: all .5s;
-             &.active {
-          box-shadow: -10px -10px 1px  #9f6e04;
-        
-        }
-           
+            transition: all 0.5s;
+            &.active {
+              box-shadow: -10px -10px 1px #9f6e04;
+            }
+
             img {
               width: 100%;
               height: 100%;
@@ -70,12 +67,11 @@
           box-shadow: 10px 10px 1px $color-green;
           background-color: #f6f7f9;
           z-index: 22;
-            transition: all .5s;
+          transition: all 0.5s;
 
-           &.active {
-          box-shadow: 10px 10px 1px #9f6e04;
-        
-        }
+          &.active {
+            box-shadow: 10px 10px 1px #9f6e04;
+          }
 
           .comma {
             position: absolute;
@@ -97,7 +93,6 @@
             z-index: 22;
           }
           .name {
-            font-family: Nunito;
             font-weight: 100;
             color: #817f7f;
             h4 {
@@ -120,7 +115,7 @@
         border-radius: 5px;
         transition: transform 0.5s;
         border: 1px solid rgb(3, 93, 26);
-      transition: all 0.5s;
+        transition: all 0.5s;
 
         //background-color: #fff;
         &.active {

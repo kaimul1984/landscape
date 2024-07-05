@@ -1,19 +1,28 @@
 @import "../../styles/mixing.module.scss";
 
-.btn {
-  padding: 10px 35px;
+.link {
+  padding: 10px 25px;
+  @include respond(mobile) {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    color: #fff;
+  }
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   background-color: $color-green;
-  border: none;
-  outline: none;
   border-radius: 3px;
-  a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: capitalize;
-    font-size: 18px;
-    font-family: "Nunito";
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 18px;
+  width: max-content;
+
+  .name {
+    @include respond(mobile) {
+      display: none;
+    }
   }
 }

@@ -1,2 +1,108 @@
 $color-green: #00730c;
 $color-light: #00730c24;
+
+@mixin container_width {
+  width: 90%;
+  max-width: 1420px;
+  margin: 0 auto;
+}
+
+// .container {
+//     width: 95%;
+//     max-width: 1320px;
+//     margin: 0 auto;
+//   }
+//   .leftside {
+//     flex: 0.7;
+//   }
+//   .rightside {
+//     flex: 0.3;
+//     height: max-content;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 50px;
+//     padding: 2rem;
+//     background-color: #ddd;
+//   }
+
+//   @mixin section {
+//     width: 100%;
+//     min-height: 600px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 3rem 0;
+//   }
+
+//   @mixin flex_center {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   @mixin flex_align_center {
+//     display: flex;
+//     align-items: center;
+//   }
+//   @mixin flex_column_center {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//   }
+
+$width-el: 1600px;
+$width-d: 1200px;
+$width-t: 768px;
+$width-m: 576px;
+$width-l: 992px;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint ==bigscreen {
+    @media only screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+  @if $breakpoint ==largescreen {
+    @media only screen and (max-width: 1420px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==desktop {
+    @media only screen and (max-width: 1286px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==laptop {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==landscape {
+    @media (min-width: 667px) and (max-width: 812px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==mobile {
+    @media only screen and (max-width: 476px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==largemobile {
+    @media (min-width: 450px) and (max-width: 570px) {
+      @content;
+    }
+  }
+}

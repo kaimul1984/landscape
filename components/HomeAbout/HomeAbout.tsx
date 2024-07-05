@@ -9,7 +9,7 @@ const HomeAbout = () => {
     <div className={styles.homeAbout}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <div className={styles.bg} />
+          {/* <div className={styles.bg} /> */}
           <div className={styles.img}>
             <Image src={aboutImg} alt="" />
           </div>

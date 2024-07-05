@@ -17,6 +17,7 @@ const Hero = () => {
             <h2>is </h2>
             <h2>similar to believe </h2>
             <h2> in tomorrow</h2>
+            <h3>Planting a graden is similar to believe in tomorrow</h3>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem
               iusto ipsam blanditiis eveniet animi, quo aperiam ad erd

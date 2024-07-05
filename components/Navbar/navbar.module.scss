@@ -5,16 +5,11 @@
   height: 55px;
   background: url(../../assests/images/bg.png);
   //background: linear-gradient(#00730C24 100%, #e4c49e   , #FFF8F1);
-
+  position: relative;
   padding: 2.5rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   .container {
-    width: 100%;
-    max-width: 1420px;
-
+    @include container_width;
     height: 100%;
     display: flex;
     align-items: center;
@@ -27,25 +22,80 @@
         height: 100%;
       }
     }
-    .menu {
-      display: flex;
-      align-items: center;
-      justify-content: center;
 
+    nav {
+      ul {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        li {
+          list-style: none;
+          a {
+            text-decoration: none;
+            color: #000;
+            font-size: 20px;
+          }
+        }
+      }
+      .social {
+        display: none;
+      }
+    }
+
+    @include respond(mobile) {
       nav {
-        margin-right: 145px;
+        position: absolute;
 
+        z-index: 9999;
+        width: 100%;
+        height: calc(100vh - 120px);
+        background-color: #0c4b35;
+        top: 80px;
+        left: 0;
+        transform: scale(0);
+        transform-origin: top right;
+        transition: transform 0.3s linear;
+        &.active {
+          transform: scale(1);
+        }
         ul {
-          display: flex;
+          gap: 10px;
+          height: 100%;
+          flex-direction: column;
+          align-items: start;
+          justify-content: center;
           li {
-            margin-left: 50px;
-            list-style: none;
+            width: 100%;
+            padding: 10px 0;
+            border-bottom: 0.1px solid #1b5e47;
             a {
-              text-decoration: none;
-              color: #000;
-              font-size: 20px;
+              margin-left: 20px;
+              color: #fff;
             }
           }
+        }
+        .social {
+          display: flex;
+          position: absolute;
+          bottom: 50px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      gap: 30px;
+
+      .mobile_menu_icon {
+        display: none;
+        @include respond(mobile) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
     }

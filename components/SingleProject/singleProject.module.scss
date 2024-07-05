@@ -3,26 +3,32 @@
 .single_project {
   overflow: hidden;
   width: 330px;
-  height: 406px;
+  height: 400px;
+  margin-bottom: 10px;
   background-color: rgb(247, 247, 247);
   border-radius: 10px;
-  box-shadow: 0 0 10px 1px rgb(177, 179, 176);
+  box-shadow: 0 0 5px 1px #a09d9d;
   position: relative;
   transition: all 0.3s linear;
+  @include respond(mobile) {
+    width: 180px;
+    height: 300px;
+  }
 
   .content {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     .image {
       width: 100%;
       height: 259px;
-      border-radius: 10px;
+      border-radius: 10px 10px 0 0;
       img {
         width: 100%;
         height: 100%;
-        border-radius: 10px;
+        border-radius: 10px 10px 0 0;
       }
     }
 
@@ -39,6 +45,9 @@
         font-size: 14px;
         line-height: 25px;
         color: #676767;
+        @include respond(mobile) {
+          display: none;
+        }
       }
     }
   }
@@ -68,12 +77,17 @@
         margin: 15px 0;
       }
       p {
-        font-size: 14px;
-        line-height: 25px;
+        font-size: 18px;
+        line-height: 2;
         color: #e8dfdf;
         font-weight: 300;
-        margin-bottom: 120px;
+        margin-bottom: 50px;
         text-shadow: 2px 2px 15px rgb(4, 3, 3);
+        @include respond(mobile) {
+          line-height: 22px;
+          font-size: 14px;
+          margin-bottom: -10px;
+        }
       }
     }
     .bottom {
@@ -91,9 +105,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
         svg {
           font-size: 1.5rem;
           color: #fff;
+        }
+
+        @include respond(mobile) {
+          width: 35px;
+          height: 35px;
+          margin-left: 100px;
+          svg {
+            font-weight: 100;
+            font-size: 1.2rem;
+          }
         }
       }
       hr {
@@ -101,7 +126,7 @@
       }
     }
   }
-  &:hover .hover-effect {
+  &:hover .hover_effect {
     //transform: translateX(0);
     left: 0;
     transition: all 0.3s linear;

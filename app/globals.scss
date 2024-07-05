@@ -14,14 +14,9 @@ $color-light: #00730c24;
 }
 
 body {
-  font-family: "Nunito", sans-serif;
-  font-family: "Poppins", sans-serif;
   text-transform: capitalize;
-}
-
-.container {
-  width: 1410px;
-  margin: auto;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {

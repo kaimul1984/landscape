@@ -1,15 +1,19 @@
 import React from "react";
 import styles from "./singleProject.module.scss";
 import { FaChevronRight } from "react-icons/fa";
-import project_1 from "../../../assests/images/project_1.png";
 import Image, { StaticImageData } from "next/image";
+
+type Style = {
+  transform: string;
+  transition: string;
+};
 
 type ItemProps = {
   image: StaticImageData;
   heading: string;
   desc: string;
   desc2: string;
-  style: React.CSSProperties;
+  style: Style;
 };
 
 const SingleProject = ({ image, heading, desc, desc2, style }: ItemProps) => {

@@ -54,13 +54,13 @@ const HomeProject = () => {
             "landscape",
           ].map((item, index) => (
             <div
+              key={`${item}_${index}`}
               className={`${
                 activeFilter === item
                   ? `${styles.tab_item} ${styles.active}`
                   : styles.tab_item
               }`}
               onClick={() => handleClickFilter(item)}
-              key={item}
             >
               {item}
             </div>
@@ -69,11 +69,11 @@ const HomeProject = () => {
         <div className={styles.projects}>
           {filterItem.map((data, index) => (
             <SingleProject
-              key={data.tag}
+              key={`${data.tag}_${index}`}
               image={data.image}
               heading={data.heading}
               desc={data.desc}
-              desc2={data.desc2}
+              desc2={data.desc2.slice(0, 100)}
               style={{
                 transform: animation.transform,
                 transition: "transform .5s",

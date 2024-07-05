@@ -1,28 +1,38 @@
-@import "../../../global.scss";
+@import "../../styles//mixing.module.scss";
 
 .homeExpert {
-  width: 1920px;
-  height: 702px;
-  margin-bottom: 100px;
+  width: 100%;
+  min-height: 300px;
+  margin: 0 auto 100px;
   background-color: $color-light;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   .container {
+    @include container_width;
     height: 100%;
+    padding: 20px 0 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     h6 {
-      margin: 100px 0 30px;
+      margin: 50px 0 30px;
+      @include respond(mobile) {
+        margin: 0 0 30px;
+      }
     }
     h2 {
       margin-bottom: 60px;
+      @include respond(mobile) {
+        font-size: 2rem;
+      }
     }
     .wrapper {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      width: 100%;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       gap: 30px;
       .card {
         width: 330px;
@@ -37,21 +47,19 @@
         gap: 10px;
         transition: all 0.3s;
         .img {
-            width: 105px;
-            height: 105px;
-            border-radius: 50%;
-            background-color: #fff;
-            padding: 15px;
+          width: 105px;
+          height: 105px;
+          border-radius: 50%;
+          background-color: #fff;
+          padding: 15px;
 
           img {
             width: 100%;
             height: 100%;
-            
           }
         }
 
         h3 {
-          font-family: Nunito;
           font-size: 25px;
           font-weight: 300px;
           color: $color-green;
@@ -63,7 +71,7 @@
           color: #676767;
           text-align: center;
         }
-       &:nth-child(1).active{
+        &:nth-child(1).active {
           background-color: $color-green;
           h3 {
             color: #fff;
@@ -71,8 +79,7 @@
           p {
             color: #fff;
           }
-          
-       }
+        }
 
         &:hover {
           background-color: $color-green;
@@ -81,6 +88,25 @@
           }
           p {
             color: #fff;
+          }
+        }
+      }
+      @include respond(mobile) {
+        .card {
+          width: 170px;
+          height: 180px;
+
+          .img {
+            width: 60px;
+            height: 60px;
+          }
+          h3 {
+            font-size: 18px;
+          }
+          p {
+            font-size: 14px;
+            width: 100%;
+            line-height: 1.5;
           }
         }
       }

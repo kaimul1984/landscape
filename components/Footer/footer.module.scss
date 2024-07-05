@@ -1,29 +1,34 @@
-@import "../../global.scss";
+@import "../../styles/mixing.module.scss";
 
 .footer {
-  width: 1920px;
-  height: 585px;
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 20px 0;
+  margin: o auto;
   background: linear-gradient(#e6f6ea 9.9%, #d6b581da, #ffff);
   .container {
-    height: 480px;
+    width: 100%;
+    max-width: 1420px;
+    min-height: 100px;
+    padding: 20px 0;
+    margin: 0 auto;
     display: flex;
-    
-    border-bottom: 3px solid #000;
+
+    border-bottom: 0.5px solid gray;
     & > div {
       flex: 1;
       display: flex;
       flex-direction: column;
-      //align-items: center;
-      justify-content: center;
     }
     h3 {
       font-size: 25px;
-      font-family: Nunito;
       font-weight: 300px;
+      border-bottom: 0.5px solid gray;
+      padding-bottom: 10px;
     }
     p {
       //margin: 50px 0;
@@ -32,7 +37,7 @@
       width: 300px;
       color: rgb(111, 108, 108);
     }
-    .about-us {
+    .about_us {
       gap: 50px;
       .icon {
         display: flex;
@@ -81,11 +86,11 @@
       .list {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 50px;
+        gap: 20px;
         div {
           display: flex;
           align-items: center;
-      color: rgb(111, 108, 108);
+          color: rgb(111, 108, 108);
 
           svg {
             margin-right: 10px;
@@ -121,19 +126,19 @@
     }
   }
   .copyright {
-    width: 1410px;
+    width: 1420px;
     display: flex;
     justify-content: space-between;
-   margin-bottom: 50px;
-.left {
-h6{
-  font-size: 10px;
-
-}}
-    .right{
-        display: flex;
-        gap: 30px;
+    margin: 20px 0;
+    .left {
+      h6 {
         font-size: 10px;
+      }
+    }
+    .right {
+      display: flex;
+      gap: 30px;
+      font-size: 10px;
     }
   }
 }

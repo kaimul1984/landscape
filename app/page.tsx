@@ -1,6 +1,17 @@
 import Image from "next/image";
 import styles from "@/styles/home.module.scss";
-import { Brand, Hero, HomeAbout, HomeProject, Service } from "@/components";
+import {
+  Blog,
+  Brand,
+  Hero,
+  HomeAbout,
+  HomeExpert,
+  HomeProject,
+  Service,
+  TeamMember,
+  Testimonial,
+  Universal,
+} from "@/components";
 
 export default function Home() {
   return (
@@ -10,14 +21,19 @@ export default function Home() {
       <HomeAbout />
       <Brand />
       <HomeProject />
-      {/* 
-      
-    
-      <HomeProject />
       <HomeExpert />
       <TeamMember />
       <Universal />
       <Testimonial />
+      {/* 
+  
+    
+    
+
+    
+
+  
+
       <Blog /> */}
     </>
   );
