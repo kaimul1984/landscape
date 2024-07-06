@@ -10,54 +10,63 @@ import team3 from "../../assests/images/team3.png";
 import comma from "../../assests/images/comma.png";
 import Image from "next/image";
 
+const items = [
+  {
+    image: team1,
+    name: "amily cooper",
+    profession: "designer",
+    comment:
+      "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
+  },
+  {
+    image: team2,
+    name: "max quilton",
+    profession: "developer",
+    comment:
+      "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
+  },
+  {
+    image: team3,
+    name: "james watson",
+    profession: "runner",
+    comment:
+      "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
+  },
+  {
+    image: team2,
+    name: "nick stanton",
+    profession: "walker",
+    comment:
+      "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
+  },
+
+  {
+    image: team1,
+    name: "brett maxwell",
+    profession: "whatever",
+    comment:
+      "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
+  },
+  {
+    image: team3,
+    name: "brad ford",
+    profession: "designer",
+    comment:
+      "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
+  },
+];
+
 const Testimonial = () => {
   const [selected, setSelected] = useState(0);
+  // const [slideIndex, setSlideIndex] = useState(0);
+  const lastSlide = items.length - 1;
 
-  const items = [
-    {
-      image: team1,
-      name: "amily cooper",
-      profession: "designer",
-      comment:
-        "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
-    },
-    {
-      image: team2,
-      name: "max quilton",
-      profession: "developer",
-      comment:
-        "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
-    },
-    {
-      image: team3,
-      name: "james watson",
-      profession: "runner",
-      comment:
-        "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
-    },
-    {
-      image: team2,
-      name: "nick stanton",
-      profession: "walker",
-      comment:
-        "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
-    },
-
-    {
-      image: team1,
-      name: "brett maxwell",
-      profession: "whatever",
-      comment:
-        "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
-    },
-    {
-      image: team3,
-      name: "brad ford",
-      profession: "designer",
-      comment:
-        "One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file One quick trick however is to put inline styles into reusable variables, which can be stored in a separate file",
-    },
-  ];
+  if (selected < 0) {
+    setSelected(lastSlide);
+  }
+  if (selected > lastSlide) {
+    setSelected(0);
+  }
 
   return (
     <div className={styles.testimonial}>
@@ -116,6 +125,61 @@ const Testimonial = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className={styles.mobile}>
+          {items.map((item, index) => {
+            let position = styles.nextSlide;
+            if (selected === index) {
+              position = styles.activeSlide;
+            }
+
+            if (index === selected - 1) {
+              position = styles.lastSlide;
+            }
+
+            return (
+              <div
+                className={`${styles.mobile_slide} ${position}`}
+                key={`${item.name}_${index}`}
+              >
+                <div className={styles.top}>
+                  <Image src={item.image} alt="team member" />
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "5px",
+                      color: "#fff",
+                    }}
+                  >
+                    <h3>{item.name}</h3>
+                    <span>{item.profession}</span>
+                    <span>Amily Ltd.</span>
+                  </div>
+                </div>
+                <div className={styles.bottom}>
+                  <FaQuoteLeft />
+                  <p
+                    className={`${
+                      selected === index ? styles.activeSlide : ""
+                    }`}
+                  >
+                    {item.comment}
+                  </p>
+                  <div
+                    className={`${
+                      selected === index
+                        ? `${styles.activeSlide} ${styles.index}`
+                        : styles.index
+                    }`}
+                  >
+                    {index + 1}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
         <div className={styles.dots}>
           {Array.from({ length: 5 }).map((i: any, index) => (

@@ -25,16 +25,8 @@ export default function Home() {
       <TeamMember />
       <Universal />
       <Testimonial />
-      {/* 
-  
-    
-    
 
-    
-
-  
-
-      <Blog /> */}
+      <Blog />
     </>
   );
 }

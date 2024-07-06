@@ -56,19 +56,19 @@ const About = () => {
               </h2>
               <p>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it make a type specimen book.
+                industry. Lorem Ipsum has been the industry&apos;s standard
+                dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it make a type specimen book.
               </p>
               <p>
                 orem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it make a type specimen book. Lorem Ipsum
-                is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled.
+                industry. Lorem Ipsum has been the industry&apos;s standard
+                dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled it make a type specimen book. Lorem
+                Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry&apos;s standard
+                dummy text ever since the 1500s, when an unknown printer took a
+                galley of type and scrambled.
               </p>
               <div className={styles.bottom}>
                 {items.map((item) => (
@@ -151,10 +151,10 @@ const About = () => {
         </div>
         <div className={styles.our_skills}>
           <div className={styles.left_content}>
-            <h3>our skills</h3>
+            <h2>our skills</h2>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard.
+              industry. Lorem Ipsum has been the industry&apos;s standard.
             </p>
             <div className={styles.reviews}>
               <div className={styles.content_1}>

@@ -9,8 +9,7 @@
   flex-direction: column;
   //service we provide//
   .wrapper {
-    width: 100%;
-    max-width: 1420px;
+    @include container_width;
 
     .services_provide {
       display: flex;
@@ -19,7 +18,9 @@
       width: 100%;
       height: 963px;
       margin-bottom: 100px;
-      //background-color: #d5c9c9;
+      @include respond(mobile) {
+        height: auto;
+      }
       h2 {
         text-align: center;
       }
@@ -29,14 +30,22 @@
         font-size: 16px;
         color: #676767;
         margin: 30px 0;
+        @include respond(mobile) {
+          width: 90%;
+        }
       }
       .cards {
-        width: 1410px;
+        width: 100%;
         height: 762px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 10px;
         place-items: center;
+        @include respond(mobile) {
+          grid-template-columns: 1fr;
+          height: auto;
+          gap: 20px;
+        }
         .card {
           width: 330px;
           height: 366px;
@@ -83,6 +92,11 @@
       height: 455px;
       display: flex;
       color: #fff;
+      @include respond(mobile) {
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+      }
       .left {
         flex: 1;
         p {
@@ -90,6 +104,10 @@
 
           font-size: 18px;
           width: 650px;
+          @include respond(mobile) {
+            width: 95%;
+            font-size: 16px;
+          }
         }
         .attributes {
           display: grid;
@@ -116,12 +134,18 @@
             }
             h5 {
               font-size: 24px;
+              @include respond(mobile) {
+                font-size: 16px;
+              }
             }
           }
         }
       }
       .right {
         flex: 1;
+        @include respond(mobile) {
+          display: none;
+        }
         img {
           width: 672px;
           height: 426px;
@@ -140,12 +164,21 @@
     justify-content: center;
     .contents {
       width: 1410px;
+      @include respond(mobile) {
+        width: 90%;
+      }
+
       p {
         margin: 30px 0;
       }
       .cards {
         display: flex;
+        flex-wrap: wrap;
         gap: 20px;
+        @include respond(mobile) {
+          align-items: center;
+          justify-content: center;
+        }
         .card {
           width: 330px;
           height: 408px;
@@ -156,7 +189,10 @@
           background-image: url("../assests/images/workingProcess-bg.png");
           background-repeat: no-repeat;
           background-position: top 100px right 30px;
-
+          @include respond(mobile) {
+            width: 90%;
+            height: 350px;
+          }
           &:nth-child(1) {
             h5 {
               color: #fff;
@@ -189,6 +225,9 @@
             font-size: 24px;
             line-height: 33px;
             color: #212529;
+            @include respond(mobile) {
+              margin: 20px 0;
+            }
           }
 
           p {
@@ -205,11 +244,9 @@
     width: 100%;
     margin-bottom: 100px;
     .container {
-      width: 100%;
-      max-width: 1420px;
+      @include container_width;
       margin: 0 auto;
       height: 247px;
-
       background-image: url("../assests/images/cta.png");
       background-position: center;
       background-size: cover;
@@ -217,13 +254,21 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      @include respond(mobile) {
+        height: auto;
+        padding: 30px;
+      }
       .content {
         margin: 0 30px;
         width: 703px;
         height: 90px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
+        @include respond(mobile) {
+          height: auto;
+        }
         button {
           width: 170px;
           height: 50px;
@@ -235,9 +280,13 @@
           }
         }
         h4 {
-          font-family: "Nunito";
           font-size: 33px;
           color: #fff;
+          @include respond(mobile) {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+          }
         }
       }
     }

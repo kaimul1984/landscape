@@ -45,9 +45,9 @@ const Staff = () => {
         <div className={styles.info}>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown of type and scrambled it to
-            make a type specimen book.
+            industry. Lorem Ipsum has been the industry&apos;s standard dummy
+            text ever since the 1500s, when an unknown of type and scrambled it
+            to make a type specimen book.
           </p>
           <Button name="discover more" />
         </div>
