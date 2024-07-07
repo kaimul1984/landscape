@@ -3,37 +3,63 @@
 .infiniteSlider {
   width: 100%;
   margin: 200px auto;
-  background-color: aqua;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  @include respond(mobile) {
+    margin: 100px 0;
+  }
 
   .wrapper {
-    position: absolute;
-
     width: 100%;
     margin: 0 auto;
     height: 100px;
     display: flex;
+
     gap: 100px;
-    animation: animate 5s linear infinite;
+    animation: animate 3s linear infinite;
+
     transition: transform 3s;
+    @include respond(mobile) {
+      animation: animate_mobile 9s linear infinite;
+      transition: transform 9s;
+
+      width: 350%;
+      gap: 70px;
+    }
     @keyframes animate {
       0% {
-        left: 0;
+        transform: translateX(0);
       }
       100% {
-        left: -10%;
+        transform: translateX(-10%);
       }
     }
+
+    @include respond(mobile) {
+      @keyframes animate_mobile {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+    }
+
     .box {
       width: 202px;
       height: 100px;
+      @include respond(mobile) {
+        width: 100%;
+        // background-color: aqua;
+        height: auto;
+      }
 
       img {
         width: 100%;
         height: 100%;
+        @include respond(mobile) {
+          object-fit: contain;
+        }
       }
     }
   }

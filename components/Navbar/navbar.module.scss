@@ -24,16 +24,86 @@
     }
 
     nav {
-      ul {
+      .nav_ul {
         display: flex;
         gap: 30px;
         align-items: center;
-        li {
+        @include respond(mobile) {
+          gap: 10px;
+        }
+        .nav_li {
           list-style: none;
-          a {
+          display: flex;
+          align-items: center;
+          position: relative;
+          cursor: pointer;
+
+          span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+          .nav_link {
             text-decoration: none;
             color: #000;
             font-size: 20px;
+            @include respond(mobile) {
+              color: #fff;
+            }
+          }
+          .sub_ul {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            background-color: antiquewhite;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 200px;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+
+            z-index: 99999;
+            transition: height 0.3s linear;
+            &.active {
+              display: flex;
+              width: max-content;
+              height: 218px;
+              opacity: 1;
+              @include respond(mobile) {
+                height: 220px;
+                width: 100%;
+              }
+
+              @include respond(mobile) {
+                position: initial;
+                width: 100%;
+              }
+            }
+            .sub_li {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              width: 100%;
+              padding: 10px 10px;
+              border-bottom: 1px solid rgb(202, 202, 202);
+              transition: all 0.3s linear;
+              cursor: pointer;
+
+              &:last-child {
+                border-bottom: 3px solid $color-green;
+              }
+              .sub_link {
+                font-size: 16px;
+                color: #000;
+              }
+              &:hover {
+                background-color: #fff;
+                border-left: 2px solid #000;
+                border-bottom: 3px solid $color-green;
+              }
+            }
           }
         }
       }
@@ -58,19 +128,28 @@
         &.active {
           transform: scale(1);
         }
-        ul {
+        .nav_ul {
           gap: 10px;
           height: 100%;
           flex-direction: column;
           align-items: start;
           justify-content: center;
-          li {
+          .nav_li {
             width: 100%;
-            padding: 10px 0;
+            padding: 10px 20px;
             border-bottom: 0.1px solid #1b5e47;
-            a {
-              margin-left: 20px;
-              color: #fff;
+            width: 100%;
+            flex-direction: column;
+            span {
+              justify-content: space-between;
+              width: 100%;
+              svg {
+                color: #fff;
+                font-size: 1.5rem;
+              }
+            }
+            .sub_ul {
+              margin-top: 20px;
             }
           }
         }
