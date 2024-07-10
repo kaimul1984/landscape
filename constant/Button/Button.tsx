@@ -1,14 +1,19 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import styles from "./button.module.scss";
 import Link from "next/link";
 import { MdOutlineWifiCalling3 } from "react-icons/md";
 
-const Button = (props: any) => {
+type ButtonProps = {
+  name: string;
+  icon?: ReactNode;
+};
+
+const Button = ({ name, icon }: ButtonProps) => {
   return (
     <Link href="#" className={styles.link}>
-      <MdOutlineWifiCalling3 size={25} />
+      {icon && icon}
 
-      <span className={styles.name}>{props.name}</span>
+      <span className={styles.name}>{name}</span>
     </Link>
   );
 };

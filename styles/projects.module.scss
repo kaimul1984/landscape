@@ -1,6 +1,7 @@
 @import "../styles/mixing.module.scss";
 
 .projects {
+  overflow: hidden;
   .home_projects {
     .pagination {
       display: flex;

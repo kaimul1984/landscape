@@ -66,12 +66,10 @@
     }
     .right {
       flex: 1;
+      width: 100%;
 
       h2 {
         margin: 30px 0;
-        @include respond(mobile) {
-          font-size: 2rem;
-        }
       }
       p {
         margin-bottom: 30px;

@@ -24,7 +24,7 @@ const Hero = () => {
             </p>
             <div className={styles.cta}>
               <Button name="Get a quote" />
-              <span>
+              <span className={styles.span}>
                 see how its work <FaLongArrowAltRight />
               </span>
             </div>

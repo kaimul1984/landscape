@@ -14,7 +14,7 @@ const Banner = ({ name }: { name: string }) => {
       <div className={styles.navigation}>
         <Link href="/">Home</Link>
         <FaChevronRight />
-        <Link className="green" href={`/${name}`}>
+        <Link className={styles.green} href={`/${name}`}>
           {name}
         </Link>
       </div>

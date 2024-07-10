@@ -143,7 +143,7 @@
             flex-direction: column;
             gap: 20px;
           }
-          span {
+          .span {
             margin-left: 25px;
             display: flex;
             align-items: center;
@@ -156,6 +156,9 @@
         }
         .review {
           display: flex;
+          align-items: center;
+          height: 70px;
+
           @include respond(mobile) {
             display: none;
           }
@@ -169,6 +172,8 @@
               width: 60px;
               height: 60px;
               border-radius: 50%;
+              margin: auto;
+              margin-top: -30px;
 
               img {
                 background: #f5f2f2;
@@ -192,8 +197,9 @@
           .ratings {
             margin-left: 200px;
             display: flex;
+            align-items: center;
             flex-direction: column;
-            h3 {
+            h60px h3 {
               font-weight: 300;
               font-size: 16px;
             }

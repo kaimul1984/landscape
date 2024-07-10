@@ -121,12 +121,15 @@
     .about_us {
       width: 100%;
       @include respond(mobile) {
-        width: 90%;
+        width: 100%;
       }
       display: flex;
       flex-direction: column;
       margin-bottom: 100px;
       .description {
+        h3 {
+          font-size: 1.5rem;
+        }
         p {
           margin-bottom: 30px;
           line-height: 1.6;
@@ -166,6 +169,7 @@
               height: 48px;
               border-radius: 50%;
               background-color: #00730c;
+              color: #fff;
               display: flex;
               align-items: center;
               justify-content: center;

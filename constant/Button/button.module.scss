@@ -20,9 +20,9 @@
   font-size: 18px;
   width: max-content;
 
-  .name {
-    @include respond(mobile) {
-      display: none;
-    }
-  }
+  // .name {
+  //   @include respond(mobile) {
+  //     display: none;
+  //   }
+  // }
 }

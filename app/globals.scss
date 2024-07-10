@@ -55,8 +55,11 @@ h2 {
   }
 
   @include respond(mobile) {
-    font-size: 2rem;
-    width: 90%;
+    font-size: 1.8rem;
+    //width: 90%;
+    text-wrap: balance;
+
+    width: 100%;
   }
 }
 

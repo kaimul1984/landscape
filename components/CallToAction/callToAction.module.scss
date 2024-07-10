@@ -1,0 +1,56 @@
+@import "../../styles/mixing.module.scss";
+
+// cta //
+.cta {
+  width: 100%;
+  margin-bottom: 100px;
+  .container {
+    @include container_width;
+    margin: 0 auto;
+    height: 247px;
+    background-image: url("../../assests/images/cta.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    @include respond(mobile) {
+      height: auto;
+      padding: 30px;
+      width: 100%;
+    }
+    .content {
+      margin: 0 30px;
+      width: 703px;
+      height: 90px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      @include respond(mobile) {
+        height: auto;
+      }
+      button {
+        width: 170px;
+        height: 50px;
+        background-color: #fff;
+        a {
+          color: $color-green;
+          font-family: "Nunito";
+          font-weight: bold;
+        }
+      }
+      h4 {
+        font-size: 33px;
+        color: #fff;
+        @include respond(mobile) {
+          text-align: center;
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+//cta//

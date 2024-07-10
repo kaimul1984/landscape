@@ -1,0 +1,47 @@
+@import "../../styles//mixing.module.scss";
+
+.brochure {
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 2px #bab8b8;
+  padding: 20px;
+  border-radius: 5px;
+
+  h3 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  p {
+    color: #676767;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  h4 {
+    font-size: 1.4rem;
+  }
+  .flie_download {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    background: #d9f1df;
+
+    span {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      //color: #fff;
+      font-size: 1.2rem;
+    }
+    svg {
+      //color: #d7d4d4;
+      font-size: 2rem;
+    }
+  }
+}

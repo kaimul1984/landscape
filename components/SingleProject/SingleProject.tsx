@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./singleProject.module.scss";
 import { FaChevronRight } from "react-icons/fa";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 
 type Style = {
   transform: string;
@@ -13,10 +14,18 @@ type ItemProps = {
   heading: string;
   desc: string;
   desc2: string;
+  slug: string;
   style: Style;
 };
 
-const SingleProject = ({ image, heading, desc, desc2, style }: ItemProps) => {
+const SingleProject = ({
+  image,
+  heading,
+  desc,
+  desc2,
+  slug,
+  style,
+}: ItemProps) => {
   return (
     <div className={styles.single_project} style={style}>
       <div className={styles.content}>
@@ -28,7 +37,7 @@ const SingleProject = ({ image, heading, desc, desc2, style }: ItemProps) => {
           <p>{desc}</p>
         </div>
       </div>
-      <div className={styles.hover_effect}>
+      <Link href={`/projects/${slug}`} className={styles.hover_effect}>
         <div className={styles.top}>
           <h5>{heading}</h5>
           <p>{desc2}</p>
@@ -39,7 +48,7 @@ const SingleProject = ({ image, heading, desc, desc2, style }: ItemProps) => {
           </div>
           <hr />
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

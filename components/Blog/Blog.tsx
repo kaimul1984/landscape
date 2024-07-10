@@ -11,6 +11,7 @@ const items = [
   {
     image: project_1,
     heading: "garden care",
+    slug: "lawncare-tips-from-experts",
     date: "sep 6 - 2022",
     desc: "ask the agronomists: lawncare tips from experts",
     info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
@@ -18,6 +19,7 @@ const items = [
   {
     image: project_2,
     heading: "landscape",
+    slug: "lawncare-tips-from-experts",
     date: "sep 6 - 2022",
     desc: "ask the agronomists: lawncare tips from experts",
     info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
@@ -25,6 +27,7 @@ const items = [
   {
     image: project_4,
     heading: "planting",
+    slug: "lawncare-tips-from-experts",
     date: "sep 6 - 2022",
     desc: "ask the agronomists: lawncare tips from experts",
     info: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
@@ -58,7 +61,7 @@ const Blog = () => {
                 <h5>{item.desc}</h5>
                 <p>{item.info}</p>
                 <div className={styles.link}>
-                  <Link href="#blog">
+                  <Link href={`/blogs/${item.slug}`}>
                     read more <RxDoubleArrowRight />
                   </Link>
                 </div>

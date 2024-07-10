@@ -10,6 +10,7 @@ import Link from "next/link";
 import { FaBarsStaggered, FaChevronDown } from "react-icons/fa6";
 import Social from "@/constant/Social/Social";
 import { FaChevronRight } from "react-icons/fa";
+import { MdOutlineWifiCalling3 } from "react-icons/md";
 
 export const navLinks = [
   {
@@ -50,31 +51,8 @@ export const navLinks = [
   },
 
   {
-    title: "Projects",
+    title: "projects",
     path: "/projects",
-    icon: FaChevronDown,
-    children: [
-      {
-        title: "Grass Cutting",
-        path: "/services/grass-cutting",
-      },
-      {
-        title: "Garden Design",
-        path: "/services/garden-design",
-      },
-      {
-        title: "Plant Growing",
-        path: "/services/Plant-growing",
-      },
-      {
-        title: "Tree Planting",
-        path: "/services/tree-Planting",
-      },
-      {
-        title: "Flower Scaping",
-        path: "/services/garden-design",
-      },
-    ],
   },
   {
     title: "blogs",
@@ -160,7 +138,10 @@ const Navbar = () => {
         </nav>
         <div className={styles.right}>
           <div className={styles.button}>
-            <Button name="Call now" />
+            <Button
+              name="Call now"
+              icon={<MdOutlineWifiCalling3 size={25} />}
+            />
           </div>
           <div
             className={styles.mobile_menu_icon}

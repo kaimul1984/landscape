@@ -18,6 +18,7 @@ import brand1 from "@/assests/images/brand1.png";
 import logo1 from "@/assests/images/logo1.png";
 import logo2 from "@/assests/images/logo2.png";
 import logo3 from "@/assests/images/logo3.png";
+import project_banner from "@/assests/images/project_banner.png";
 import project_1 from "@/assests/images/project_1.png";
 import project_2 from "@/assests/images/project_2.png";
 import project_3 from "@/assests/images/project_3.png";
@@ -47,7 +48,6 @@ import mission2 from "@/assests/images/mission2.png";
 import mission3 from "@/assests/images/mission3.png";
 import mission4 from "@/assests/images/mission4.png";
 import our_skill from "@/assests/images/our_skill.png";
-
 import whychooseus from "@/assests/images/whychooseus.png";
 import consultation from "@/assests/images/Consultation.png";
 import design from "@/assests/images/Design.png";
@@ -68,6 +68,7 @@ export {
   logo1,
   logo2,
   logo3,
+  project_banner,
   project_1,
   project_2,
   project_3,

@@ -1,0 +1,189 @@
+@import "./mixing.module.scss";
+
+.blog_details {
+  width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+  .container {
+    @include container_width;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 100px;
+
+    .left {
+      flex: 0.7;
+      @include respond(mobile) {
+        flex: 1;
+        width: 100%;
+      }
+      .mainImg {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+      .admin {
+        display: flex;
+        margin: 20px 0;
+        align-items: center;
+        justify-content: space-between;
+        .date {
+          display: flex;
+          align-items: center;
+          gap: 100px;
+          @include respond(mobile) {
+            gap: 50px;
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      h1 {
+        color: #000;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        @include respond(mobile) {
+          font-size: 1.5rem;
+        }
+      }
+      p {
+        margin-bottom: 40px;
+        line-height: 1.6;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        color: #676767;
+      }
+      .qoutes {
+        background-color: antiquewhite;
+        padding: 2rem;
+        border-radius: 10px;
+        margin-bottom: 50px;
+
+        p {
+          position: relative;
+          text-align: center;
+
+          margin: auto;
+          &::before {
+            content: "\201C"; /* Unicode for left double quotation mark */
+            position: absolute;
+            margin-left: -40px;
+            margin-top: -30px;
+            font-size: 60px; /* Adjust the font size */
+            color: #333; /* Set the text color */
+            top: 0;
+            font-weight: bold; /* Make the quotation mark bold */
+            font-style: italic; /* Italicize the quotation mark */
+          }
+          &::after {
+            content: "\201D";
+            position: absolute;
+            font-size: 25px; /* Adjust the font size */
+            color: #333; /* Set the text color */
+            margin-right: 5px;
+            font-size: 60px;
+            margin-top: -10px;
+            font-weight: bold; /* Make the quotation mark bold */
+            font-style: italic; /* Italicize the quotation mark */
+          }
+        }
+      }
+      .img {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        margin-bottom: 50px;
+        @include respond(mobile) {
+          flex-direction: column;
+          width: 100%;
+        }
+        img {
+          width: 400px;
+          @include respond(mobile) {
+            width: 100%;
+          }
+        }
+        .para {
+          width: 500px;
+          line-height: 2;
+          margin-bottom: 0;
+          @include respond(mobile) {
+            width: 100%;
+          }
+        }
+      }
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #d7d4d4;
+        padding-top: 30px;
+        @include respond(mobile) {
+          flex-direction: column;
+        }
+        .share {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+      }
+    }
+    .right {
+      right: 0.3;
+      @include respond(mobile) {
+        flex: 1;
+        width: 100%;
+      }
+      .search {
+        width: 100%;
+        margin-bottom: 50px;
+        h3 {
+          margin-bottom: 10px;
+          font-size: 1.8rem;
+        }
+        span {
+          display: flex;
+          align-items: center;
+          background-color: #fff;
+          min-width: 350px;
+          border: 0.5px solid gray;
+          border-radius: 5px;
+
+          input {
+            width: 90%;
+            padding: 10px 0;
+            outline: none;
+            border: none;
+            padding-left: 10px;
+            border-radius: 5px;
+          }
+          svg {
+            background-color: #fff;
+          }
+        }
+      }
+      .recent_posts {
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px 2px #bab8b8;
+        padding: 20px;
+        border-radius: 5px;
+
+        h3 {
+          margin-bottom: 20px;
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

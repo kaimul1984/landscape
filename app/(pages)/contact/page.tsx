@@ -1,7 +1,7 @@
 import styles from "@/styles/contact.module.scss";
 import Image from "next/image";
 import { FaPhoneAlt, FaEnvelopeOpenText, FaPeriscope } from "react-icons/fa";
-import { Banner, InfiniteSlider } from "@/constant";
+import { Banner, InfiniteSlider, Social } from "@/constant";
 import { Universal } from "@/components";
 import { facebook, linkedin, pinterest, twitter } from "@/assests/images";
 
@@ -60,12 +60,8 @@ const Contact = () => {
               <FaPeriscope />
               <span>2072 Pinnickinick Street, WA 98370</span>
             </div>
-            <div className={styles.social}>
-              <Image src={facebook} alt="" />
-              <Image src={twitter} alt="" />
-              <Image src={pinterest} alt="" />
-              <Image src={linkedin} alt="" />
-            </div>
+
+            <Social />
           </div>
         </div>
       </div>

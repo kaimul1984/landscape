@@ -22,7 +22,7 @@
     align-items: center;
     position: relative;
     @include respond(mobile) {
-      height: 110px;
+      height: 90px;
     }
     .box {
       flex: 0.2;
@@ -60,7 +60,8 @@
         width: 140px;
         height: 100px;
         @include respond(mobile) {
-          width: 100px;
+          width: 90px;
+          height: 60px;
         }
         img {
           width: 100%;

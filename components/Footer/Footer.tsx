@@ -6,11 +6,15 @@ import { MdOutlineLocalPhone, MdOutlineLocalPostOffice } from "react-icons/md";
 import Button from "../../constant/Button/Button";
 import Image from "next/image";
 import { facebook, linkedin, pinterest, twitter } from "@/assests/images";
+import { Social } from "@/constant";
+import { FaChevronRight } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.container}>
+        {/* about-us */}
         <div className={styles.about_us}>
           <h3>about us</h3>
           <p>
@@ -18,13 +22,10 @@ const Footer = () => {
             industry. Lorem Ipsum has been the industry&apos;s standard dummy
             text ever since the 1500s,when an unknown printer took.
           </p>
-          <div className={styles.icon}>
-            <Image src={facebook} alt="facebook" />
-            <Image src={twitter} alt="twitter" />
-            <Image src={pinterest} alt="pinterest" />
-            <Image src={linkedin} alt="linkedin" />
-          </div>
+          <Social />
         </div>
+        {/* about-us */}
+        {/* contact-us */}
         <div className={styles.contacts}>
           <h3>contact</h3>
           <div className={styles.location}>
@@ -44,25 +45,31 @@ const Footer = () => {
             <p>email@gmail.com.au</p>
           </div>
         </div>
+        {/* contact-us end */}
+        {/* quick-links */}
         <div className={styles.links}>
           <h3>links</h3>
           <div className={styles.list}>
             {[
               "home",
               "about",
-              "servixes",
+              "services",
               "project",
               "blog",
               "FAQ",
               "contact us",
               "Thank you",
             ].map((item, index) => (
-              <div key={index}>
-                <TiArrowForwardOutline /> {item}
-              </div>
+              <Link href="/" key={index}>
+                <FaChevronRight /> {item}
+              </Link>
             ))}
           </div>
         </div>
+        {/* quick-links end */}
+
+        {/* news-letter */}
+
         <div className={styles.newsLetter}>
           <h3>newsletter</h3>
           <p>
@@ -75,7 +82,9 @@ const Footer = () => {
             <Button name="subscribe" />
           </div>
         </div>
+        {/* news-letter end*/}
       </div>
+      {/* copyRight */}
       <div className={styles.copyright}>
         <div className={styles.left}>
           <h6>@copyright,2023. all right reserved</h6>

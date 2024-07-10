@@ -11,7 +11,12 @@ import Testimonial from "./Testimonials/Testimonial";
 import Blog from "./Blog/Blog";
 import Footer from "./Footer/Footer";
 import Staff from "./Staff/Staff";
-
+import WorkingProcess from "./WorkingProcess/WorkingProcess";
+import CallToAction from "./CallToAction/CallToAction";
+import WhyChooseUs from "./WhyChooseUs/WhyChooseUs";
+import Category from "./Category/Category";
+import Tag from "./Tag/Tag";
+import Brochure from "./Brochure/Brochure";
 export {
   Hero,
   Navbar,
@@ -26,4 +31,10 @@ export {
   Blog,
   Footer,
   Staff,
+  WorkingProcess,
+  CallToAction,
+  WhyChooseUs,
+  Category,
+  Tag,
+  Brochure,
 };

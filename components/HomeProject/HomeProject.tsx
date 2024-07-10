@@ -74,6 +74,7 @@ const HomeProject = () => {
               heading={data.heading}
               desc={data.desc}
               desc2={data.desc2.slice(0, 100)}
+              slug={data.slug}
               style={{
                 transform: animation.transform,
                 transition: "transform .5s",

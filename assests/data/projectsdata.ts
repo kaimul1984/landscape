@@ -13,6 +13,7 @@ const projectsdata = [
   {
     image: project_1,
     heading: "garden care",
+    slug: "garden-care",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     desc2:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
@@ -21,6 +22,7 @@ const projectsdata = [
   {
     image: project_2,
     heading: "landscape",
+    slug: "landscape",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     desc2:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
@@ -29,6 +31,7 @@ const projectsdata = [
   {
     image: project_3,
     heading: "planting",
+    slug: "planting",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     desc2:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
@@ -37,6 +40,7 @@ const projectsdata = [
   {
     image: project_4,
     heading: "lawn care",
+    slug: "lawn-care",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     desc2:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
@@ -45,6 +49,7 @@ const projectsdata = [
   {
     image: project_5,
     heading: "home plant",
+    slug: "home-plant",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     desc2:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
@@ -53,6 +58,7 @@ const projectsdata = [
   {
     image: project_6,
     heading: "mowing",
+    slug: "mowing",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     desc2:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
@@ -61,6 +67,7 @@ const projectsdata = [
   {
     image: project_7,
     heading: "planting",
+    slug: "planting",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     desc2:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
@@ -69,6 +76,7 @@ const projectsdata = [
   {
     image: project_8,
     heading: "garden care",
+    slug: "garden-care",
     desc: "Lorem Ipsum is simply dummy text of the printing and typesetting",
     desc2:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer",
